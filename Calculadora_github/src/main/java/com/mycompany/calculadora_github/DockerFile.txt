@@ -1,0 +1,14 @@
+# Use an official OpenJDK image as a base
+FROM openjdk:17-jdk-slim
+
+# Set the working directory in the container
+WORKDIR /app
+
+# Copy the Java file into the container
+COPY Calculadora_github.java /app
+
+# Compile the Java program
+RUN javac Calculadora_github.java
+
+# Define the command to run the app
+CMD ["java", "com.mycompany.calculadora_github.Calculadora_github"]
